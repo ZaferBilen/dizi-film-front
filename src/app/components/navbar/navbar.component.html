@@ -1,0 +1,17 @@
+<header style="z-index: 999999999999999999;">
+    <div class="netflixLogo">
+        <a id="logo" routerLink="ana-sayfa"><img src="assets/zafer-bilen-favicon-color.png" alt="Logo Image"></a>
+    </div>
+    <nav class="main-nav">
+        @if (user) {
+        <a routerLink="ana-sayfa">Ana Sayfa</a>
+        }
+    </nav>
+    <nav class="sub-nav">
+        @if (user) {
+        <a class="greeting">Hoşgeldin, {{user.name}} {{user.surname}} ({{user.role}} )</a>
+        <a routerLink="admin" *ngIf="user.role === 'ADMIN'">Admin Ekranı</a>
+        <a (click)="logOut()">Çıkış Yap</a>
+        }
+    </nav>
+</header>

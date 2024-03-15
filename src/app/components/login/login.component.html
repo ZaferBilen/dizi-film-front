@@ -1,0 +1,25 @@
+<!-- <h1>Giriş Yap</h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label for="first-name">Email: </label>
+    <input id="first-name" type="text" formControlName="email">
+    <label for="last-name">Şifre: </label>
+    <input id="last-name" type="password" formControlName="sifre">
+    <button type="submit">Giriş Yap</button>
+</form> -->
+
+<div class="w-100 h-100 d-flex justify-content-center align-items-center">
+    <div class="main ">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <app-register></app-register>
+        </div>
+        <div class="login">
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input id="first-name" type="text" formControlName="email">
+                <input id="last-name" type="password" formControlName="sifre">
+                <button type="submit">Giriş Yap</button>
+            </form>
+        </div>
+    </div>
+</div>

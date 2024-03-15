@@ -1,0 +1,37 @@
+<ng-container *ngIf="favoriDizis && favoriDizis.length !== 0">
+    <h1 class="heading mt-5" id="home">Favori Dizilerim</h1>
+    <div class="box">
+        <div *ngFor="let dizi of favoriDizis" class="box-wrapper">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="buttons">
+                    <i (click)="deleteFav(dizi.diziId)" class="fa-solid fa-star add-fav"></i>
+                </div>
+                <a style="cursor: pointer;" (click)="goToDizi(dizi.diziName)">
+                    <img [src]="dizi.diziKapakPath" alt="">
+                </a>
+                <span style="color: white;">
+                    {{dizi.diziName}}
+                </span>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<h1 class="heading mt-5" id="home">Tüm Diziler</h1>
+<div class="box">
+    <div *ngFor="let dizi of dizis" class="box-wrapper">
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <div class="buttons">
+                <i *ngIf="!check(dizi.name)" (click)="addFavori(dizi.id)" class="fa-regular fa-star add-fav"></i>
+                <i (click)="goToFragman(dizi.fragmanPath!)" class="fa-solid fa-circle-play play-fragman"></i>
+            </div>
+            <a style="cursor: pointer;" (click)="goToDizi(dizi.name)">
+                <img [src]="dizi.kapakPath" alt="">
+            </a>
+            <span style="color: white;">
+                {{dizi.name}}
+            </span>
+        </div>
+    </div>
+</div>

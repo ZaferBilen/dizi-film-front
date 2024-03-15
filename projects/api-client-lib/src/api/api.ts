@@ -1,0 +1,17 @@
+export * from './bolumController.service';
+import { BolumControllerService } from './bolumController.service';
+export * from './diziCategoryController.service';
+import { DiziCategoryControllerService } from './diziCategoryController.service';
+export * from './diziController.service';
+import { DiziControllerService } from './diziController.service';
+export * from './favoriDizilerController.service';
+import { FavoriDizilerControllerService } from './favoriDizilerController.service';
+export * from './favoriFilmlerController.service';
+import { FavoriFilmlerControllerService } from './favoriFilmlerController.service';
+export * from './filmCategoryController.service';
+import { FilmCategoryControllerService } from './filmCategoryController.service';
+export * from './filmController.service';
+import { FilmControllerService } from './filmController.service';
+export * from './kullaniciController.service';
+import { KullaniciControllerService } from './kullaniciController.service';
+export const APIS = [BolumControllerService, DiziCategoryControllerService, DiziControllerService, FavoriDizilerControllerService, FavoriFilmlerControllerService, FilmCategoryControllerService, FilmControllerService, KullaniciControllerService];

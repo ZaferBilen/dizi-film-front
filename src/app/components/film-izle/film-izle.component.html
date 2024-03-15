@@ -1,0 +1,11 @@
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-12 h-100">
+            <div class="h-100 w-100">
+                <h1 class="text-center py-3">{{film.name}}</h1>
+                <iframe autoplay width="90%"  height="75%" type="video/mp4" allowfullscreen controls
+                    [src]="film.filmPath | safe"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

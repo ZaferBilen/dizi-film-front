@@ -1,0 +1,24 @@
+@if (!showValidationScreen) {
+@if (showMessage) {
+<div class="success-msg">
+    <i class="fa fa-check"></i>
+    Kayıt Başarıyla Tamamlandı. Giriş Yapabilirsiniz.
+</div>
+}
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label for="chk" aria-hidden="true">Kayıt Ol</label>
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="surname">
+    <input type="email" formControlName="email">
+    <input type="password" formControlName="sifre">
+    <input type="text" formControlName="role">
+    <button type="submit">Devam Et</button>
+</form>
+} @else {
+<div>
+    <h3 class="text-center pt-5">Kalan Süre {{count}} </h3>
+    <label for="validation">Kodu Giriniz </label>
+    <input id="validation" type="text" [(ngModel)]="validationCode">
+    <button (click)="register()">Kayıt Ol</button>
+</div>
+}

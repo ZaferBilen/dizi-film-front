@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.table-row {
+  background-color: aqua !important;
+}
+
+.lesson-form-row {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
