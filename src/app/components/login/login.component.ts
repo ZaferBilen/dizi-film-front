@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
   constructor() {
     this.form = this.fb.group(
       {
-        email: ['Mail adresiniz', Validators.required],
-        sifre: ['Şifreniz', Validators.required]
+        email: ['', Validators.required],
+        sifre: ['', Validators.required]
       }
     )
   }
@@ -49,4 +49,5 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('ana-sayfa')
     })
   }
+
 }

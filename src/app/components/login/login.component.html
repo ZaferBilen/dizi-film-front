@@ -15,11 +15,12 @@
         </div>
         <div class="login">
             <form [formGroup]="form" (ngSubmit)="submit()">
-                <label for="chk" aria-hidden="true">Login</label>
-                <input id="first-name" type="text" formControlName="email">
-                <input id="last-name" type="password" formControlName="sifre">
+                <label for="chk" aria-hidden="true">Giriş Yap</label>
+                <input type="text" formControlName="email" placeholder="E-mail">
+                <input type="password" formControlName="sifre" placeholder="Şifreniz">
                 <button type="submit">Giriş Yap</button>
             </form>
         </div>
     </div>
 </div>
+

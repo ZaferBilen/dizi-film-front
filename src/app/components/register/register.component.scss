@@ -30,7 +30,7 @@ label {
 }
 
 input {
-    width: 60%;
+    width: 55%;
     height: 20px;
     background: #e0dede;
     justify-content: center;
@@ -39,12 +39,12 @@ input {
     padding: 10px;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 button {
     width: 60%;
-    height: 40px;
+    height: 35px;
     margin: 10px auto;
     justify-content: center;
     display: block;
@@ -52,7 +52,7 @@ button {
     background: #573b8a;
     font-size: 1em;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 40px;
     outline: none;
     border: none;
     border-radius: 5px;
@@ -99,6 +99,25 @@ button:hover {
 }
 
 .success-msg {
-    color: #270;
-    background-color: #DFF2BF;
+    color: #000;
+    background-color: #573b8a;
 }
+
+.kalan-sure{
+    color : rgb(178, 227, 240);
+    font-weight: bold;
+}
+
+.role-select{
+    background: #e6f9ff;
+    width: 55%;
+    height: 20px;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    text-align: center;
+
+} 

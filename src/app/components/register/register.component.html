@@ -7,18 +7,28 @@
 }
 <form [formGroup]="form" (ngSubmit)="submit()">
     <label for="chk" aria-hidden="true">Kayıt Ol</label>
-    <input type="text" formControlName="name">
-    <input type="text" formControlName="surname">
-    <input type="email" formControlName="email">
-    <input type="password" formControlName="sifre">
-    <input type="text" formControlName="role">
+    <input type="text" formControlName="name" placeholder="Adınız">
+    <input type="text" formControlName="surname" placeholder="Soyadınız">
+    <input type="email" formControlName="email" placeholder="E-mail">
+    <input type="password" formControlName="sifre" placeholder="Şifreniz">
+    <select formControlName="role"
+        class="role-select">
+        <option value="NORMAL">NORMAL</option>
+        <option value="ADMIN">ADMIN</option>
+    </select>
     <button type="submit">Devam Et</button>
 </form>
 } @else {
-<div>
-    <h3 class="text-center pt-5">Kalan Süre {{count}} </h3>
+<div> 
     <label for="validation">Kodu Giriniz </label>
     <input id="validation" type="text" [(ngModel)]="validationCode">
+    <h3 class="text-center pt-2">Kalan Süre {{count}} </h3>
+    <div *ngIf="kalanSureBittiMi" class="text-center kalan-sure">Süre doldu!</div>
+    <div *ngIf="showMessage" class="success-msg">
+        <i class="fa fa-check"></i>
+        Kayıt Başarıyla Tamamlandı. Giriş Yapabilirsiniz.
+    </div>
     <button (click)="register()">Kayıt Ol</button>
 </div>
 }
+
